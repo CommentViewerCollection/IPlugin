@@ -55,5 +55,6 @@ namespace Plugin
         string Comment { get; }
         bool IsNgUser { get; }
         bool IsFirstComment { get; }
+        string SiteName { get; }
     }
 }
