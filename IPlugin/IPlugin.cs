@@ -40,6 +40,17 @@ namespace Plugin
         /// <param name="pluginName"></param>
         /// <returns>serialized options</returns>
         string LoadOptions(string path);
+        /// <summary>
+        /// 全ての接続中のConnectionにコメントを投稿する
+        /// </summary>
+        void PostCommentToAll(string comment);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="guid"></param>
+        /// <param name="comment"></param>
+        void PostComment(string guid, string comment);
+        IEnumerable<IConnectionStatus> GetAllConnectionStatus();
     }
     public interface ICommentData
     {
