@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using SitePlugin;
+
 namespace Plugin
 {
     public interface IPlugin
     {
         string Name { get; }
         string Description { get; }
+        void OnMessageReceived(IMessage message, IMessageMetadata messageMetadata);
         void OnCommentReceived(ICommentData commentData);
         //connectionが追加されたり削除されたりしたら通知される仕組みが欲しい
         //接続、切断情報も。
